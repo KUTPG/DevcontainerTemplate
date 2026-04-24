@@ -3,7 +3,7 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postCreateCommand": "cd .devcontainer && bash setup.sh",
   "customizations": {
     "vscode": {
       "extensions": [
