@@ -1,7 +1,7 @@
 #!/bin/bash
-# テンプレートをホームディレクトリに固定パスでコピー
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-cp "${SCRIPT_DIR}/template.cpp" ~/.cpp_template
+
+SCRIPT_DIR="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
+cp "$SCRIPT_DIR/template.cpp" ~/.cpp_template
 
 cat << 'EOF' >> ~/.bashrc
 new() {
